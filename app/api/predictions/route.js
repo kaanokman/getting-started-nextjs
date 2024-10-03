@@ -27,7 +27,7 @@ export async function POST(request) {
   const { prompt } = await request.json();
 
   const options = {
-    version: '8beff3369e81422112d93b89ca01426147de542cd4684c244b673b105188fe5f',
+    version: 'a42692c54c0f407f803a0a8a9066160976baedb77c91171a01730f9b0d7beeff',
     input: { prompt }
   }
 
