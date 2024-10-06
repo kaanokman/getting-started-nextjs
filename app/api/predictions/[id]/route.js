@@ -11,13 +11,18 @@ replicate.fetch = (url, options) => {
   return fetch(url, { cache: "no-store", ...options });
 };
 
-export async function GET(request, {params}) {
+export async function GET(request, { params }) {
   const { id } = params;
-  const prediction = await replicate.predictions.get(id);
 
-  if (prediction?.error) {
-    return NextResponse.json({ detail: prediction.error }, { status: 500 });
+  try {
+    const prediction = await replicate.predictions.get(id);
+
+    if (prediction?.error) {
+      return NextResponse.json({ detail: prediction.error }, { status: 500 });
+    }
+
+    return NextResponse.json(prediction);
+  } catch (err) {
+    return NextResponse.json({ detail: err.message }, { status: 500 });
   }
-
-  return NextResponse.json(prediction);
 }

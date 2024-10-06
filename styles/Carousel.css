@@ -1,0 +1,129 @@
+.vertical-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.product-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 10%; */
+    flex: 1;
+    font-size: 25px;
+    font-weight: 400;
+    color: #ffffff;
+    opacity: 1;
+    box-sizing: border-box;
+    padding: 0px;
+    border: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.splide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    max-width: none !important;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: #efefef;
+}
+
+.splide__track {
+    /* height: 460px;
+    width: 500px; */
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    margin: 0;
+
+}
+
+.product-image {
+    width: 90%;
+    aspect-ratio: 1/1;
+    margin-bottom: 5%;
+    border-radius: 5%;
+}
+
+/* @media only screen and (max-width: 480px) { */
+.splide__track {
+    height: 85%;
+    width: 100%;
+}
+
+.splide__arrows {
+    display: none;
+}
+
+.product-text {
+    font-size: 25px;
+}
+
+/* } */
+
+.splide__list {
+    height: 100%;
+    /* Make sure the list is 100% height */
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    margin: 0;
+
+}
+
+.splide__slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #fcfcfc;
+    width: 100%;
+    color: #fff;
+    max-height: none !important;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    border-radius: 5%;
+    background-color: #333333;
+
+}
+
+.splide__slide.is-active {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.splide__slide:not(.is-active) {
+    opacity: 0.5;
+    transition: opacity 0.2s ease;
+}
+
+.splide__arrows {
+    opacity: 1;
+    box-sizing: border-box;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
+
+.splide__arrow {
+    color: white;
+    opacity: 1;
+    font-size: 14px;
+    box-sizing: border-box;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
+}
